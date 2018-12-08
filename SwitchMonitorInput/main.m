@@ -16,16 +16,16 @@ void changeMonitorInputSource(MonitorManager *monitorManager, io_service_t monit
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSString *primaryMonitorLocation = @"IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/PEG0@1/IOPP/PEGP@0/NVDA,Display-C@2/NVDA/display0/AppleDisplay";
-        NSString *secondaryMonitorLocation = @"IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/PEG0@1/IOPP/PEGP@0/NVDA,Display-B@1/NVDA/display0/AppleDisplay";
+        NSString *primaryMonitorLocation = @"IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/PEG0@1/IOPP/GFX0@0/ATY,Longavi@3/AMDFramebufferVIB/display0/AppleDisplay";
+        NSString *secondaryMonitorLocation = @"IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/PEG0@1/IOPP/GFX0@0/ATY,Longavi@4/AMDFramebufferVIB/display0/AppleDisplay";
 
         NSDictionary *primaryMonitorProfile = @{
-            @"desktop": @16,
+            @"desktop": @18,
             @"laptop": @15,
         };
 
         NSDictionary *secondaryMonitorProfile = @{
-            @"desktop": @18,
+            @"desktop": @16,
             @"laptop": @15,
         };
         
