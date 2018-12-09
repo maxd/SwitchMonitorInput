@@ -13,7 +13,7 @@
 const Byte sendAddress = 0x6E;
 const Byte replayAddress = 0x6F;
 
-const UInt64 kReplyDelay = 60;
+const UInt64 kReplyDelay = 60 * kMillisecondScale;
 
 - (io_service_t)findMonitorByLocation: (NSString *)expectedLocation {
     kern_return_t err;
@@ -109,7 +109,7 @@ const UInt64 kReplyDelay = 60;
     request.replyBuffer = (vm_address_t) replyData;
     request.replyBytes = sizeof(replyData);
     
-    request.minReplyDelay = 60;
+    request.minReplyDelay = kReplyDelay;
     
     [self sendRequest:&request toMonitor:monitor];
     

@@ -19,13 +19,17 @@ int main(int argc, const char * argv[]) {
         NSString *primaryMonitorLocation = @"IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/PEG0@1/IOPP/GFX0@0/ATY,Longavi@3/AMDFramebufferVIB/display0/AppleDisplay";
         NSString *secondaryMonitorLocation = @"IOService:/AppleACPIPlatformExpert/PCI0@0/AppleACPIPCI/PEG0@1/IOPP/GFX0@0/ATY,Longavi@4/AMDFramebufferVIB/display0/AppleDisplay";
 
+        // 15 - USB-C
+        // 16 - Display Port
         NSDictionary *primaryMonitorProfile = @{
-            @"desktop": @18,
+            @"desktop": @16,
             @"laptop": @15,
         };
 
+        // 15 - USB-C
+        // 18 - HDMI - 1
         NSDictionary *secondaryMonitorProfile = @{
-            @"desktop": @16,
+            @"desktop": @18,
             @"laptop": @15,
         };
         
